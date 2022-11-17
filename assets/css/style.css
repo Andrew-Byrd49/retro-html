@@ -8,6 +8,8 @@ body {
     font-stretch: condensed;
     letter-spacing: 0px;
     font-weight: 600;
+    /* height: 89vh; */
+
     /* border-left: solid 5px rgb(212, 212, 212);
     border-top: solid 5px rgb(212, 212, 212);
     border-bottom: solid 5px rgb(143, 143, 143);
@@ -16,6 +18,12 @@ body {
 
 footer {
   display: flex;
+  margin-top: 69vh;
+}
+
+iframe {
+  height: 49.6vh;
+  width: 100%;
 }
 
 /* Header --------------------------------------- */
@@ -340,18 +348,18 @@ footer {
 /* Item details page ---------------------------- */
 .item-details-sec {
   display: flex;
-  flex-direction: row;
-  width: 100%;
+  flex-direction: column;
+  width: auto;
   height: 100%;
+  margin: 70px;
+  margin-top: 20px;
 }
 
 .item-details-container {
-  border: solid 1px #333;
-  width: 100%;
-  height: 100%;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  width: auto;
+  height: auto;
   padding: 20px;
+  background-color: white;
 }
 
 .item-top-info {
@@ -361,21 +369,64 @@ footer {
   height: 100%;
   width: auto;
   padding: 10px;
-  margin-bottom: 20px;;
+  margin-bottom: 20px;
+  background-color: rgb(231, 231, 231);
 }
 
 .item-img {
   border: solid 1px #333;
-  width: 100%;
-  height: 50vh;
+  width: 50vw;
+  height: 80vh;
   background-color: rgb(226, 226, 226);
   margin-right: 10px;
 }
 
+.item-img img {
+  width: 50vw;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 0%;
+}
+
+.alt-item-img {
+  height: 50vh;
+}
+
 .item-bio {
   border: solid 1px #333;
-  width: 100%;
+  width: 50%;
   margin-left: 10px;
+  background-color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration: none;
+}
+
+.item-bio p {
+  color: rgb(82, 82, 82);
+}
+
+.item-bio h2 {
+  color: rgb(255, 52, 52);
+}
+
+.item-bio h3 {
+  margin-top: 50px;
+  margin-bottom: 0px;
+  color: rgb(92, 148, 238);
+}
+
+.item-bio h4 {
+  margin-top: 10px;
+}
+
+.item-bio a {
+  text-decoration: none;
+  color: #111;
+  background-color: rgb(206, 152, 243);
+  padding: 8px;
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
 .item-bottom-info {
@@ -386,22 +437,19 @@ footer {
   width: auto;
   padding: 10px;
   margin-bottom: 20px;
+  background-color: rgb(231, 231, 231);
 }
 
 .item-vid {
-  height: 50vh;
+  height: 100%;
   width: 100%;
   border: solid 1px #333;
-  margin-right: 10px;
   background-color: rgb(173, 173, 173);
+  margin-left: 10px;
 }
 
-.item-photo {
-  height: auto;
-  width: 100%;
-  border: solid 1px #333;
-  margin-left: 10px;
-  background-color: rgb(226, 226, 226);
+.alt-info {
+  margin-bottom: 0;
 }
 
 /* Login page / Signup page */
@@ -446,6 +494,11 @@ footer {
   padding: 5px;
 }
 
+.login-btn a {
+  color:rgb(242, 121, 255);
+  text-decoration: none;
+}
+
 .dash {
   color:rgb(206, 255, 28);
 }
@@ -469,7 +522,7 @@ footer {
 
 /* Drag ------------------------------- */
 
-#overlay {
+/* #overlay {
   position:absolute; 
   z-index: 0;
   left:200px; 
@@ -495,4 +548,151 @@ footer {
   z-index: 5;
   left:350px; 
   top:200px; 
+} */
+
+#overlay {
+  position:absolute; 
+  z-index: 0;
+  left:100px; 
+  top:100px; 
+}
+
+#nice {
+  position:absolute; 
+  z-index: 1;
+  left:450px; 
+  top:320px; 
+}
+
+#logo {
+  position:absolute; 
+  z-index: 2;
+  left:400px; 
+  top:40px; 
+}
+
+#login {
+  position:absolute; 
+  z-index: 5;
+  left:350px; 
+  top:200px; 
+}
+
+
+/* Footer ------------------------------- */
+
+.left-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 100%;
+  position: relative;
+}
+
+.left-icons a {
+  position: relative;
+  margin-left: 40px;
+  text-decoration: none;
+  color: #111;
+}
+
+.left-icons img {
+  height: 100px !important;
+  width: 100px !important;
+  object-fit: cover;
+  position: absolute;
+  top: -83px;
+  left: -30px;
+}
+
+.left-icons p {
+  margin-top: 0;
+  /* padding: 5px;
+  padding-top: 0px;
+  padding-bottom: 1px; */
+  /* border: solid 1px #333;
+  background-color: beige;
+  border-radius: 5px; */
+}
+
+.right-icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: auto;
+  height: 100%;
+  position: relative;
+}
+
+.right-icons a {
+  position: relative;
+  margin-right: 40px;
+  text-decoration: none;
+  color: #111;
+}
+
+.right-icons img {
+  height: 100px !important;
+  width: 100px !important;
+  object-fit: cover;
+  position: absolute;
+  top: -83px;
+  left: -30px;
+}
+
+.right-icons p {
+  margin-top: 0;
+  /* padding: 5px;
+  padding-top: 0px;
+  padding-bottom: 1px; */
+  /* border: solid 1px #333;
+  background-color: beige;
+  border-radius: 5px; */
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: -10px;
+}
+
+.top-right-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 100%;
+  position: relative;
+  top: -70px;
+  right: 10px;
+}
+
+.top-right-icons a {
+  position: relative;
+  left: 14px;
+}
+
+.bottom-right-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 100%;
+  position: relative;
+}
+
+.sims-icon {
+  position: relative;
+  left: -27px;
+  margin-left: 20px;;
 }
